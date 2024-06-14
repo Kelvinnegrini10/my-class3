@@ -1,7 +1,6 @@
 import pywhatkit as kit
 import time
 
-
 # Classe Professor
 class Professor:
     def __init__(self, nome):
@@ -62,12 +61,8 @@ def main():
         nome = input("Insira seu nome: ")
         professor = Professor(nome)
 
-        turmaA_manha = Sala("turmaA", input("Insira o número da sala para a turmaA na parte da manhã: "))
-        turmaB_manha = Sala("turmaB", input("Insira o número da sala para a turmaB na parte da manhã: "))
-
-        # Definindo os números das salas para a tarde
-        turmaA_tarde = Sala("turmaA", "102")
-        turmaB_tarde = Sala("turmaB", "202")
+        turmaA_manha = Sala("turmaA", input("Insira o número da sala para a turmaA : "))
+        turmaB_manha = Sala("turmaB", input("Insira o número da sala para a turmaB : "))
 
         # Números de telefone dos alunos das turmas
         turma_A = [
@@ -87,13 +82,13 @@ def main():
         if periodo == "manhã":
             turma = input("Insira a turma (turmaA ou turmaB): ")
             sala = turmaA_manha if turma.lower() == 'turmaa' else turmaB_manha
-            mensagem = f"A aula na parte da manhã será na sala {sala.numero} para a turma {turma}."
+            mensagem = f"A aula na parte da manhã será na sala {sala.numero} para a  {turma}."
             numeros = turma_A if turma.lower() == 'turmaa' else turma_B
             professor.enviar_notificacao(mensagem, sala, numeros)
         else:
             turma = input("Insira a turma (turmaA ou turmaB): ")
-            sala = turmaA_tarde if turma.lower() == 'turmaa' else turmaB_tarde
-            mensagem = f"A aula na parte da tarde será na sala {sala.numero} para a turma {turma}."
+            sala = Sala(turma.lower(), input(f"Insira o número da sala para a {turma} na parte da tarde: "))
+            mensagem = f"A aula na parte da tarde será na sala {sala.numero} para a  {turma}."
             numeros = turma_A if turma.lower() == 'turmaa' else turma_B
             professor.enviar_notificacao(mensagem, sala, numeros)
     elif tipo_usuario == "aluno":
@@ -112,3 +107,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
