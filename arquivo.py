@@ -13,8 +13,8 @@ janela.geometry("500x400")
 janela.title("My Class") 
 
 # Carregamento da imagem
-imagem = Image.open("imagem1.png")  # Substitua "logo.png" pelo nome da sua imagem
-imagem = imagem.resize((100, 100))  # Redimensiona a imagem
+imagem = Image.open("imagem1.png")  
+imagem = imagem.resize((100, 100))  
 imagem_tk = ImageTk.PhotoImage(imagem)
 
 # Componentes da interface
