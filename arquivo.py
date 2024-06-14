@@ -14,7 +14,7 @@ janela.title("My Class")
 
 # Carregamento da imagem
 imagem = Image.open("imagem1.png")  # Substitua "logo.png" pelo nome da sua imagem
-imagem = imagem.resize((100, 100), Image.ANTIALIAS)  # Redimensiona a imagem
+imagem = imagem.resize((100, 100))  # Redimensiona a imagem
 imagem_tk = ImageTk.PhotoImage(imagem)
 
 # Componentes da interface
@@ -44,8 +44,8 @@ def enviar_mensagem():
     
     # Números de telefone dos alunos das turmas
     turma_A = [
-        "+5516994290188", "+5516992787899", "+5519992874556", "+5516993096589", "+5511956397841", "+5516974033367", "+5516994290154",
-        "+5516997500763", "+5516988156727", "+5516988016776", "+5516996151754", "+5516933008761",
+        "+5516992787899", "+5519992874556", "+5516993096589", "+5511956397841", "+5516974033367", "+5516994290154",
+        "+5516994290188", "+5516997500763", "+5516988156727", "+5516988016776", "+5516996151754", "+5516933008761",
         "+5519981436632", "+5516996077586", "+5516992655132", "+5516996207149"
     ]
 
